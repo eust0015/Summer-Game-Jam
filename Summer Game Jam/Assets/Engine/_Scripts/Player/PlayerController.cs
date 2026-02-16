@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] float runSpeed = 10f;
 	[SerializeField] float decay = 0.5f;
 
+	Vector2 movementInput { get; set; } = Vector2.zero;
+
 	private void Awake()
 	{
         if (Instance != null && Instance != this)
@@ -49,10 +51,10 @@ public class PlayerController : MonoBehaviour
 
 	void ApplyForces()
 	{
-		if (PlayerInputHandler.Instance.MovementInput != Vector2.zero)
+		if (movementInput != Vector2.zero)
 		{
-			Vector3 moveDirection = Camera.main.transform.forward * PlayerInputHandler.Instance.MovementInput.y +
-									Camera.main.transform.right * PlayerInputHandler.Instance.MovementInput.x;
+			Vector3 moveDirection = Camera.main.transform.forward * movementInput.y +
+									Camera.main.transform.right * movementInput.x;
 
 			moveDirection.y = 0f;
 
@@ -74,5 +76,18 @@ public class PlayerController : MonoBehaviour
 			Vector3 decayedVelocity = Vector3.Lerp(horizontalVelocity, Vector3.zero, decay * Time.fixedDeltaTime);
 			rb.linearVelocity = new Vector3(decayedVelocity.x, currentVelocity.y, decayedVelocity.z);
 		}
+	}
+
+	private void OnEnable()
+	{
+		playerInput.actions["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+		playerInput.actions["Move"].canceled += ctx => movementInput = ctx.ReadValue<Vector2>();
+
+	}
+
+	private void OnDisable()
+	{
+		playerInput.actions["Move"].performed -= ctx => movementInput = ctx.ReadValue<Vector2>();
+		playerInput.actions["Move"].canceled -= ctx => movementInput = ctx.ReadValue<Vector2>();
 	}
 }

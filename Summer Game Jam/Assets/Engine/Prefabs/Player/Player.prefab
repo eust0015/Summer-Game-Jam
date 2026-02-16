@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5654345642005449497}
   - component: {fileID: 707497247229986066}
+  - component: {fileID: 7070748572557518748}
   - component: {fileID: 9168674695152259171}
   - component: {fileID: 3852523045674694520}
   - component: {fileID: 2533280445279424415}
@@ -170,6 +171,25 @@ MonoBehaviour:
   lockMouse: 1
   pitchMinMax: {x: -40, y: 85}
   defaultPanTilt: {x: 0, y: 0}
+--- !u!114 &7070748572557518748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355888561765441594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c10bb22335f9a743b1d819bae76eec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetSystem
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  distance: 0
+  occlusionLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!20 &9168674695152259171
 Camera:
   m_ObjectHideFlags: 0
@@ -365,7 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0.1, y: 0.1, z: 0.1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -455,7 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6792526932439753104}
   - component: {fileID: 3074536276737648786}
-  - component: {fileID: 1980660152266475228}
+  - component: {fileID: 8597611678014450365}
   - component: {fileID: 5429344115085141307}
   - component: {fileID: 1548764703885072388}
   m_Layer: 0
@@ -496,7 +516,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   playerCamera: {fileID: 707497247229986066}
---- !u!114 &1980660152266475228
+  walkSpeed: 5
+  runSpeed: 10
+  decay: 0.5
+--- !u!114 &8597611678014450365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -505,9 +528,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8296130110682923059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62b0a67addba8b4e82e9dc28a8325e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cd74ea308506b742b751e8d36be5c55, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractController
+  targetSystem: {fileID: 7070748572557518748}
+  defaultInteractDuration: 0.5
+  maxInteractionDistance: 3
+  cancelIfTargetChanges: 1
+  interactionCooldown: 0.15
 --- !u!114 &5429344115085141307
 MonoBehaviour:
   m_ObjectHideFlags: 0
