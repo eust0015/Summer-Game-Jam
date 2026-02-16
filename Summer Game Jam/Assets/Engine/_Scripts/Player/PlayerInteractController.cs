@@ -36,7 +36,6 @@ public class PlayerInteractController : MonoBehaviour
 	{
 		if (ctx.started)
 		{
-
 			TryBeginInteract();
 		}
 		else if (ctx.canceled)
@@ -72,6 +71,8 @@ public class PlayerInteractController : MonoBehaviour
 			dur = durTarget.InteractionTime;
 		}
 		currentDuration = Mathf.Max(0f, dur);
+
+		Debug.Log("[Interact] Interaction duration: " + currentDuration);
 
 		current = target;
 		timer = 0f;
@@ -161,13 +162,13 @@ public class PlayerInteractController : MonoBehaviour
 
 	private void OnEnable()
 	{
-		playerInput.actions["Interact"].performed += ctx => OnInteractInput(ctx);
+		playerInput.actions["Interact"].started += ctx => OnInteractInput(ctx);
 		playerInput.actions["Interact"].canceled += ctx => OnInteractInput(ctx);
 	}
 
 	private void OnDisable()
 	{
-		playerInput.actions["Interact"].performed -= ctx => OnInteractInput(ctx);
+		playerInput.actions["Interact"].started -= ctx => OnInteractInput(ctx);
 		playerInput.actions["Interact"].canceled -= ctx => OnInteractInput(ctx);
 	}
 }

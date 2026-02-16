@@ -65,7 +65,12 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 		//ObjectInteractUI.Instance.SetProgress(progress);
 	}
 
-	public void OnInteract(GameObject interactor) => onInteracted?.Invoke(interactor);
+	public void OnInteract(GameObject interactor)
+	{
+		Debug.Log("Interacted with " + itemID);
+		onInteracted?.Invoke(interactor);
+	}
+	
 
 	public Vector3 GetTargetPoint() => transform.position;
 

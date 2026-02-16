@@ -11,7 +11,6 @@ public class PlayerTargetSystem : MonoBehaviour
 	[SerializeField] LayerMask occlusionLayerMask;
 
 	Vector2 screenCenter = Vector2.zero;
-	private Camera cam;
 
 	private IInteractable currentTarget;
 
@@ -108,5 +107,13 @@ public class PlayerTargetSystem : MonoBehaviour
 	private void FixedUpdate()
 	{
 		HandleRaycast();
+	}
+
+	void OnGUI()
+	{
+		if (Application.isEditor)  // or check the app debug flag
+		{
+			GUI.Label(new Rect(0, 0, 100, 20), $"");
+		}
 	}
 }
