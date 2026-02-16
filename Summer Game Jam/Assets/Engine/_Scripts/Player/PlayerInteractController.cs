@@ -72,7 +72,7 @@ public class PlayerInteractController : MonoBehaviour
 		}
 		currentDuration = Mathf.Max(0f, dur);
 
-		Debug.Log("[Interact] Interaction duration: " + currentDuration);
+		// Debug.Log("[Interact] Interaction duration: " + currentDuration);
 
 		current = target;
 		timer = 0f;
