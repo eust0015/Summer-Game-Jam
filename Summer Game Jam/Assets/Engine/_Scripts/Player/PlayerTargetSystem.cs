@@ -49,6 +49,7 @@ public class PlayerTargetSystem : MonoBehaviour
 		return interactable;
 	}
 
+	// Checks if there is a clear line of sight between the camera transform position and the target
 	bool HasClearLOS(RaycastHit hit)
 	{
 		Vector3 dir = Camera.main.transform.position - hit.point;
