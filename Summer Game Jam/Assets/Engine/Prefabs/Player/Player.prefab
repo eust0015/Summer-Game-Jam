@@ -455,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6792526932439753104}
   - component: {fileID: 3074536276737648786}
+  - component: {fileID: 1980660152266475228}
   - component: {fileID: 5429344115085141307}
   - component: {fileID: 1548764703885072388}
   m_Layer: 0
@@ -495,6 +496,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   playerCamera: {fileID: 707497247229986066}
+--- !u!114 &1980660152266475228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296130110682923059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62b0a67addba8b4e82e9dc28a8325e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
 --- !u!114 &5429344115085141307
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,8 +9,13 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
 
     // Components
-    Rigidbody playerRigidbody;
+    Rigidbody rb;
     CapsuleCollider playerCollider;
+
+	[Header("Movement Config")]
+	[SerializeField] float walkSpeed = 5f;
+	[SerializeField] float runSpeed = 10f;
+	[SerializeField] float decay = 0.5f;
 
 	private void Awake()
 	{
@@ -21,7 +26,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Instance = this;
-		playerRigidbody = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
 	}
 
@@ -36,4 +41,38 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+
+	private void FixedUpdate()
+	{
+		ApplyForces();
+	}
+
+	void ApplyForces()
+	{
+		if (PlayerInputHandler.Instance.MovementInput != Vector2.zero)
+		{
+			Vector3 moveDirection = Camera.main.transform.forward * PlayerInputHandler.Instance.MovementInput.y +
+									Camera.main.transform.right * PlayerInputHandler.Instance.MovementInput.x;
+
+			moveDirection.y = 0f;
+
+			float targetSpeed = walkSpeed;
+			Vector3 targetVelocity = moveDirection.normalized * targetSpeed;
+
+			Vector3 currentVelocity = rb.linearVelocity;
+			Vector3 horizontalVelocity = new Vector3(currentVelocity.x, 0, currentVelocity.z);
+			Vector3 deltaV = targetVelocity - horizontalVelocity;
+
+			// keep vertical unchanged, only adjust XZ
+			rb.AddForce(deltaV, ForceMode.VelocityChange);
+		}
+		else
+		{
+			// Only apply drag to horizontal velocity, not vertical (gravity/fly)
+			Vector3 currentVelocity = rb.linearVelocity;
+			Vector3 horizontalVelocity = new Vector3(currentVelocity.x, 0, currentVelocity.z);
+			Vector3 decayedVelocity = Vector3.Lerp(horizontalVelocity, Vector3.zero, decay * Time.fixedDeltaTime);
+			rb.linearVelocity = new Vector3(decayedVelocity.x, currentVelocity.y, decayedVelocity.z);
+		}
+	}
 }

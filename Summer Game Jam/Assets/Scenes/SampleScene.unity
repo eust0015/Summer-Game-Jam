@@ -254,6 +254,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1507590563253367637, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507590563253367637, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507590563253367637, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6792526932439753104, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8284304
