@@ -49,8 +49,6 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	{
 		currentState = FocusState.FOCUSED;
 		Crosshair.Instance.SetDetect(true);
-		//ObjectInteractUI.Instance.SetTarget(this);
-		Debug.Log($"[{itemID}]: {interactionTime}");
 		onFocused?.Invoke();
 	}
 
@@ -58,14 +56,12 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	{
 		currentState = FocusState.UNFOCUSED;
 		Crosshair.Instance.SetDetect(false);
-		//ObjectInteractUI.Instance.ResetTarget();
 		onUnfocused?.Invoke();
 	}
 
 	public void InteractProgress(float progress)
 	{
 		Crosshair.Instance.SetProgress((int)(progress * 100f));
-		//ObjectInteractUI.Instance.SetProgress(progress);
 	}
 
 	public void OnInteract(GameObject interactor)
