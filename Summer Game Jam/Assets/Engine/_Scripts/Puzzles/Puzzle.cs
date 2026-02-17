@@ -57,9 +57,10 @@ public class Puzzle : MonoBehaviour
 
 	private void OnDrawGizmos()
 	{
-		Handles.Label(transform.position + Vector3.up * 0.1f, $"Puzzle: {puzzleName} State: {isPuzzleSolved}");
-
-		if (NextPuzzle != null)
+#if UNITY_EDITOR
+        Handles.Label(transform.position + Vector3.up * 0.1f, $"Puzzle: {puzzleName} State: {isPuzzleSolved}");
+#endif
+        if (NextPuzzle != null)
         {
             Gizmos.color = (isPuzzleSolved) ? Color.green : Color.red;
             Gizmos.DrawLine(transform.position, NextPuzzle.transform.position);

@@ -81,6 +81,8 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 
 	private void OnDrawGizmosSelected()
 	{
+#if UNITY_EDITOR
 		Handles.Label(transform.position + Vector3.up * 0.1f, $"Interactable: {itemID} State: {currentState}");
+#endif
 	}
 }
