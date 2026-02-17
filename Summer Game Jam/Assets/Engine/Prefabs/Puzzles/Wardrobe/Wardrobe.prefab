@@ -651,9 +651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56884b7a85f4d84b9146cf56633efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WardrobePuzzle
-  puzzleData:
-    puzzleName: 
-    isSolved: 0
+  puzzleName: Unnamed Puzzle
+  isPuzzleSolved: 0
+  requiredIndex: 0
+  NextPuzzle: {fileID: 0}
   items:
   - {fileID: 7207915409391826345}
   - {fileID: 1048574114668659173}
@@ -788,6 +789,10 @@ PrefabInstance:
       propertyPath: keyIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 5482771489904138288}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -865,6 +870,10 @@ PrefabInstance:
       propertyPath: keyIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 5482771489904138288}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -942,6 +951,10 @@ PrefabInstance:
       propertyPath: keyIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 5482771489904138288}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1019,6 +1032,10 @@ PrefabInstance:
       propertyPath: keyIndex
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 5482771489904138288}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1186,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 5482771489904138288}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

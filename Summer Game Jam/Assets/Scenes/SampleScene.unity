@@ -119,6 +119,132 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &99461805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_Name
+      value: Clothes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 1428052011}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+--- !u!1001 &143657483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_Name
+      value: Clothes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 2103259409}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
 --- !u!1 &234847855
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,9 +369,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 2103259409}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8528948
+      value: 0.3499999
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.y
@@ -253,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5245145
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalRotation.w
@@ -679,6 +809,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 804763f50689d4d4da7b84d7ed0a0f0b, type: 3}
+--- !u!1001 &951525030
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_Name
+      value: Clothes (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 2103259409}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
 --- !u!1001 &1101070901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,6 +931,119 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddee7780ab3c86944874907e2d426ccc, type: 3}
+--- !u!1001 &1256906267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_Name
+      value: Clothes (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 1428052011}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+--- !u!1 &1428052010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428052012}
+  - component: {fileID: 1428052011}
+  m_Layer: 0
+  m_Name: TestPuzzle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1428052011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428052010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1929d34704fd64b809cfb006d50ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Puzzle
+  puzzleName: Unnamed Puzzle
+  isPuzzleSolved: 0
+  requiredIndex: 0
+  NextPuzzle: {fileID: 0}
+--- !u!4 &1428052012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428052010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.9, y: 0.5, z: 13.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616866507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1325,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 121ef0f3e4e35c843997e05ea59ac821, type: 3}
+--- !u!1001 &1779321205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_Name
+      value: Clothes (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: parentPuzzle
+      value: 
+      objectReference: {fileID: 1428052011}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.9500003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
 --- !u!1001 &1788730627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,6 +1495,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5482771489904138288, guid: bbbf4b95f6d87d24a8f0653ac80a27eb, type: 3}
+      propertyPath: NextPuzzle
+      value: 
+      objectReference: {fileID: 2103259409}
+    - target: {fileID: 5482771489904138288, guid: bbbf4b95f6d87d24a8f0653ac80a27eb, type: 3}
+      propertyPath: puzzleData.puzzleName
+      value: Wardrobe
+      objectReference: {fileID: 0}
     - target: {fileID: 8397663855846317259, guid: bbbf4b95f6d87d24a8f0653ac80a27eb, type: 3}
       propertyPath: m_Name
       value: Wardrobe
@@ -1131,6 +1512,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbf4b95f6d87d24a8f0653ac80a27eb, type: 3}
+--- !u!1 &2103259408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103259410}
+  - component: {fileID: 2103259409}
+  m_Layer: 0
+  m_Name: TestPuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2103259409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103259408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1929d34704fd64b809cfb006d50ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Puzzle
+  puzzleName: Unnamed Puzzle
+  isPuzzleSolved: 0
+  requiredIndex: 2
+  NextPuzzle: {fileID: 1428052011}
+--- !u!4 &2103259410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103259408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4, y: 0.5, z: 7.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2132452234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1205,4 +1634,11 @@ SceneRoots:
   - {fileID: 2132452234}
   - {fileID: 1868980509}
   - {fileID: 346824884}
+  - {fileID: 143657483}
+  - {fileID: 951525030}
+  - {fileID: 99461805}
+  - {fileID: 1256906267}
+  - {fileID: 1779321205}
   - {fileID: 1655969555}
+  - {fileID: 2103259410}
+  - {fileID: 1428052012}

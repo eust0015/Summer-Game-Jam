@@ -6,12 +6,12 @@ public class WardrobePuzzle : Puzzle
     [SerializeField] List<PuzzleObject> items = new List<PuzzleObject>();
     int randomIndex;
 
-	public void Validate(int key)
+	public override void ValidatePuzzle(int key)
 	{
 		if (key == randomIndex)
 		{
 			Debug.Log("Correct item selected! Puzzle Solved.");
-			SolvePuzzle();
+			base.SolvePuzzle();
 		}
 		else
 		{
