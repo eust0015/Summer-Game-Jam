@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PuzzleObject : MonoBehaviour
 {
-	[SerializeField] WardrobePuzzle parentPuzzle;
+	[SerializeField] Puzzle parentPuzzle;
 	[SerializeField] int keyIndex = 0;
 	Interactable item;
 
@@ -12,14 +12,15 @@ public class PuzzleObject : MonoBehaviour
 
 		if (parentPuzzle != null)
 		{
-			parentPuzzle.Validate(keyIndex);
+			parentPuzzle.ValidatePuzzle(keyIndex);
 		}
     }
 	private void Awake()
 	{
 		item = this.GetComponent<Interactable>();
 
-		parentPuzzle = GetComponentInParent<WardrobePuzzle>();
+		if (parentPuzzle == null)
+			parentPuzzle = GetComponentInParent<Puzzle>();
 
 		if (parentPuzzle == null)
 		{
@@ -35,5 +36,16 @@ public class PuzzleObject : MonoBehaviour
 	private void OnDisable()
 	{
 		item.OnInteractedEvent -= HandlePuzzleObject;
+	}
+
+	private void OnDrawGizmos()
+	{
+		if (parentPuzzle != null)
+		{
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawLine(transform.position, parentPuzzle.transform.position);
+			Gizmos.DrawSphere(transform.position, 0.05f);
+			Gizmos.color = Color.white;
+		}
 	}
 }

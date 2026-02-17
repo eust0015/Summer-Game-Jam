@@ -1,30 +1,70 @@
 using UnityEngine;
 using System;
+using UnityEditor;
 
 public class Puzzle : MonoBehaviour
 {
-    public event Action<Puzzle> OnPuzzleSolved;
+    [Header("Puzzle Config")]
+    [SerializeField] string puzzleName = "Unnamed Puzzle";
+    [SerializeField] bool isPuzzleSolved = false;
+    [SerializeField] int requiredIndex = 0;
 
-	[SerializeField] PuzzleData puzzleData;
+	public event Action<Puzzle> OnPuzzleSolved;
+
+    public Puzzle NextPuzzle;
+    public bool isActive = false;
+
+    public virtual void ActivatePuzzle()
+    {
+        isActive = true;
+        Debug.Log($"Activating puzzle: {puzzleName}");
+	}
+
+    public virtual void ValidatePuzzle(int index)
+    {
+        Debug.Log($"{puzzleName}:{isActive} received index: {index}");
+
+        if (isActive)
+        {
+            if (index == requiredIndex)
+            {
+                Debug.Log($"Correct index {index} for puzzle: {puzzleName}");
+                SolvePuzzle();
+            }
+            else
+            {
+                Debug.Log($"Incorrect index {index} for puzzle: {puzzleName}. Required index is {requiredIndex}");
+			}
+		}
+    }
 
 	public void SolvePuzzle()
     {
         Debug.Log("Puzzle Solved");
-        puzzleData.isSolved = true;
+		isPuzzleSolved = true;
         OnPuzzleSolved?.Invoke(this);
+
+        if (NextPuzzle != null)
+        {
+            Debug.Log($"Activating next puzzle: {NextPuzzle.puzzleName}");
+            NextPuzzle.ActivatePuzzle();
+		}
+        else
+        {
+            Debug.Log("No next puzzle to activate.");
+		}
 	}
 
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
-    {
-        
-    }
+	private void OnDrawGizmos()
+	{
+		Handles.Label(transform.position + Vector3.up * 0.1f, $"Puzzle: {puzzleName} State: {isPuzzleSolved}");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		if (NextPuzzle != null)
+        {
+            Gizmos.color = (isPuzzleSolved) ? Color.green : Color.red;
+            Gizmos.DrawLine(transform.position, NextPuzzle.transform.position);
+		}
+	}
 }
 
 [System.Serializable]
