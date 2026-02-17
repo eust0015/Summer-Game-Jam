@@ -20,6 +20,12 @@ public class PlayerTargetSystem : MonoBehaviour
 	{
 		if (interactable == null || interactable == currentTarget) return;
 
+		// Reset focus of previous target if we are changing targets
+		if (currentTarget != null && interactable != currentTarget)
+		{
+			currentTarget?.OnUnfocus();
+		}
+
 		currentTarget = interactable;
 
 		if (currentTarget != null)

@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Item : MonoBehaviour, IInteractable, IInteractDuration
 {
 	public float InteractionTime { get; set; } = 0f;
+	Animator anim;
 	public Vector3 GetTargetPoint()
 	{
 		return transform.position;
@@ -12,14 +13,15 @@ public abstract class Item : MonoBehaviour, IInteractable, IInteractDuration
 
 	public void OnFocus()
 	{
-		// Code to execute when the door is focused
+		anim?.SetBool("isFocused", true);
 		Debug.Log("Item focused");
 	}
 
 	public void OnUnfocus()
 	{
+		anim?.SetBool("isFocused", false);
+		Debug.Log("Item Unfocused");
 		// Code to execute when the door loses focus
-		Debug.Log("Item lost focus");
 	}
 
 	public void OnInteract(GameObject obj)
@@ -33,14 +35,13 @@ public abstract class Item : MonoBehaviour, IInteractable, IInteractDuration
 		// Implement drop logic here
 	}
 
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
+	private void Awake()
 	{
-
+		anim = TryGetComponent<Animator>(out Animator animator) ? animator : null;
 	}
 
-	// Update is called once per frame
-	void Update()
+	// Start is called once before the first execution of Update after the MonoBehaviour is created
+	void Start()
 	{
 
 	}
