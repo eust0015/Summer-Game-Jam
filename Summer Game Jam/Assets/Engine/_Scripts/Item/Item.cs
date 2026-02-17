@@ -14,13 +14,13 @@ public abstract class Item : MonoBehaviour, IInteractable, IInteractDuration
 	public void OnFocus()
 	{
 		anim?.SetBool("isFocused", true);
-		Debug.Log("Item focused");
+		// Debug.Log("Item focused");
 	}
 
 	public void OnUnfocus()
 	{
 		anim?.SetBool("isFocused", false);
-		Debug.Log("Item Unfocused");
+		// Debug.Log("Item Unfocused");
 		// Code to execute when the door loses focus
 	}
 

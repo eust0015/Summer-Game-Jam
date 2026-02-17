@@ -81,7 +81,7 @@ public class PlayerTargetSystem : MonoBehaviour
 		{
 			if (!HasClearLOS(hitInfo))
 			{
-				Debug.Log("LOS Blocked");
+				// Debug.Log("LOS Blocked");
 				FocusEnd();
 				return;
 			}
