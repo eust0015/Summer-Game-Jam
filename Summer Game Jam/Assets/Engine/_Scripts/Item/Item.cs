@@ -1,10 +1,12 @@
-using Unity.VisualScripting.Antlr3.Runtime;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Item : MonoBehaviour, IInteractable, IInteractDuration
 {
 	public float InteractionTime { get; set; } = 0f;
 	Animator anim;
+
 	public Vector3 GetTargetPoint()
 	{
 		return transform.position;

@@ -608,6 +608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3812456204184903033}
+  - component: {fileID: 5482771489904138288}
   m_Layer: 0
   m_Name: Wardrobe
   m_TagString: Untagged
@@ -625,8 +626,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3657643513035905532}
   - {fileID: 2872108521832524036}
@@ -638,6 +639,27 @@ Transform:
   - {fileID: 261906656352644996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5482771489904138288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397663855846317259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56884b7a85f4d84b9146cf56633efb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WardrobePuzzle
+  puzzleData:
+    puzzleName: 
+    isSolved: 0
+  items:
+  - {fileID: 7207915409391826345}
+  - {fileID: 1048574114668659173}
+  - {fileID: 3560405679538646225}
+  - {fileID: 868155064835308241}
+  - {fileID: 1276958197775952071}
 --- !u!1 &9150974496832466776
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -812,6 +838,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
   m_PrefabInstance: {fileID: 1952815118303963837}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3560405679538646225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+  m_PrefabInstance: {fileID: 1952815118303963837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19546c43e4136f14699b38e2dabe17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleObject
 --- !u!1001 &2665455333514987401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_Name
       value: Clothes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
@@ -869,6 +910,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+--- !u!114 &1048574114668659173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+  m_PrefabInstance: {fileID: 2665455333514987401}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19546c43e4136f14699b38e2dabe17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleObject
 --- !u!4 &2060283143654344358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
@@ -885,6 +937,10 @@ PrefabInstance:
     - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_Name
       value: Clothes (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,6 +987,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+--- !u!114 &868155064835308241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+  m_PrefabInstance: {fileID: 2773266792978382013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19546c43e4136f14699b38e2dabe17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleObject
 --- !u!4 &2168094469972704658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
@@ -947,6 +1014,10 @@ PrefabInstance:
     - target: {fileID: 2516953830794416544, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_Name
       value: Clothes (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: keyIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
@@ -998,6 +1069,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
   m_PrefabInstance: {fileID: 4307829030781939371}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1276958197775952071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+  m_PrefabInstance: {fileID: 4307829030781939371}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19546c43e4136f14699b38e2dabe17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleObject
 --- !u!1001 &5473986852353389243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1149,6 +1231,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+--- !u!114 &7207915409391826345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058174060470601324, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+  m_PrefabInstance: {fileID: 5654121975266096069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19546c43e4136f14699b38e2dabe17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleObject
 --- !u!4 &8511091775620641514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}

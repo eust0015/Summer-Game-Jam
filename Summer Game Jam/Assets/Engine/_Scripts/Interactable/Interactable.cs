@@ -1,6 +1,8 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
+using System.Collections;
 
 public interface IInteractable
 {
@@ -36,6 +38,9 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	public UnityEvent onUnfocused;
 	public UnityEvent<GameObject> onInteracted;
 
+	public event Action OnInteractedEvent;
+
+
 	public string ItemID => itemID;
 	public string PromptText => promptText;
 	private FocusState currentState = FocusState.NONE;
@@ -67,6 +72,7 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	public void OnInteract(GameObject interactor)
 	{
 		Debug.Log("Interacted with " + itemID);
+		OnInteractedEvent?.Invoke();
 		onInteracted?.Invoke(interactor);
 	}
 	
