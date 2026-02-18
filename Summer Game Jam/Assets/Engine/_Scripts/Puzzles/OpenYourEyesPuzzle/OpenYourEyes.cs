@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OpenYourEyes : MonoBehaviour
+public class OpenYourEyes : Puzzle
 {
     [SerializeField] private RectTransform topEyeLid;
     [SerializeField] private RectTransform bottomEyeLid;
@@ -48,5 +48,6 @@ public class OpenYourEyes : MonoBehaviour
     {
         onPuzzleCompleted?.Invoke();
         enabled = false;
-    }
+        GameManager.Instance.EnableControl(true);
+	}
 }
