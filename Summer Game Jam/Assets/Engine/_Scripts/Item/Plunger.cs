@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plunger : Item, IInteractable
+public class Plunger : MonoBehaviour, IInteractable
 {
 	public float InteractionTime { get; set; } = 0f;
 	Animator anim;
@@ -12,10 +12,10 @@ public class Plunger : Item, IInteractable
 	{
 		return transform.position;
 	}
-	public override void Use()
-    {
-        
-    }
+	// public override void Use()
+    // {
+    //     Debug.Log("Used item");
+    // }
 
 	public void OnFocus()
 	{
