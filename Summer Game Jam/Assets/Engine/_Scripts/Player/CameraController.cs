@@ -18,9 +18,6 @@ public class CameraController : MonoBehaviour
     [SerializeField] Vector2 pitchMinMax = new Vector2(-40.0f, 85.0f);
 	[SerializeField] Vector2 defaultPanTilt = new Vector2(0.0f, 0.0f);
 
-	float pan;
-    float tilt;
-
 
 	private void Awake()
 	{
@@ -68,6 +65,11 @@ public class CameraController : MonoBehaviour
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
 		}
+	}
+
+	public void ToggleCameraMovement(bool state)
+	{
+		cinemachinePanTilt.enabled = state;
 	}
 
 	void ResetCamera()

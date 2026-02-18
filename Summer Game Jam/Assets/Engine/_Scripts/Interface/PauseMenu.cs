@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 	public void Pause()
     {
         Toggle(!isPaused);
+		PlayerController.Instance.EnableControl(!isPaused);
 	}
 
     void Toggle(bool state)
@@ -20,16 +21,21 @@ public class PauseMenu : MonoBehaviour
         pauseMenuCanvasGroup.interactable = state;
         pauseMenuCanvasGroup.blocksRaycasts = state;
         isPaused = state;
+
+		Cursor.lockState = state ? CursorLockMode.None : CursorLockMode.Locked;
+		Cursor.visible = !state;
 	}
 
     public void Resume()
     {
-        Toggle(false);
-    }
+        Debug.Log("CLICKED RESUME");
+		PlayerController.Instance.EnableControl(true);
+		Toggle(false);
+	}
 
     public void Quit()
     {
-        SceneManager.LoadSceneAsync(0);
+		SceneManager.LoadSceneAsync(0);
     }
 
 	private void Awake()
