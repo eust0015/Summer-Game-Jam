@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.101
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.5
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.36538804, g: 0.39814577, b: 0.4811321, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.592
   m_FlareStrength: 1
@@ -333,6 +333,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444522145889661817, guid: 7d9223043d6cb7d4b866d322615c42db, type: 3}
+      propertyPath: windStrength
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 444522145889661817, guid: 7d9223043d6cb7d4b866d322615c42db, type: 3}
+      propertyPath: windInterval.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1174619437466767916, guid: 7d9223043d6cb7d4b866d322615c42db, type: 3}
       propertyPath: m_Name
       value: Curtain
@@ -749,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 662623209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 2, z: 17.300001}
+  m_LocalPosition: {x: -10.535, y: 2, z: 17.300001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3155,7 +3163,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3253,7 +3261,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &1846238369
+--- !u!1 &1811335001
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3261,23 +3269,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1846238372}
-  - component: {fileID: 1846238371}
-  - component: {fileID: 1846238370}
+  - component: {fileID: 1811335004}
+  - component: {fileID: 1811335003}
+  - component: {fileID: 1811335002}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1846238370
+--- !u!114 &1811335002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846238369}
+  m_GameObject: {fileID: 1811335001}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -3300,21 +3308,21 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!108 &1846238371
+--- !u!108 &1811335003
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846238369}
+  m_GameObject: {fileID: 1811335001}
   m_Enabled: 1
   serializedVersion: 12
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 49.88889
-  m_InnerSpotAngle: 14.653888
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 1
@@ -3323,7 +3331,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.6662533
+    m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3365,21 +3373,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!4 &1846238372
+--- !u!4 &1811335004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846238369}
+  m_GameObject: {fileID: 1811335001}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7049492, y: 0.45944357, z: -0.055196688, w: 0.537505}
-  m_LocalPosition: {x: -10.900001, y: 3.45, z: 18.4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.8, y: 2.65, z: 17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 53.954, y: 135, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146994209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,5 +4091,4 @@ SceneRoots:
   - {fileID: 8180522533470995413}
   - {fileID: 320247068}
   - {fileID: 949037458}
-  - {fileID: 315414650}
-  - {fileID: 1846238372}
+  - {fileID: 1811335004}
