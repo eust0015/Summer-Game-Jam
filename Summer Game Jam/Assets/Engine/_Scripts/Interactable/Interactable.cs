@@ -15,7 +15,6 @@ public interface IInteractable
 	Vector3 GetTargetPoint();
 }
 
-
 [DisallowMultipleComponent]
 public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 {

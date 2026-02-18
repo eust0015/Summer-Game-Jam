@@ -43,11 +43,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistanceThreshold: 4.8
-    - _EdgeFalloff: 0.1
-    - _Opacity: 0.15
+    - _EdgeFalloff: 0.05
+    - _Opacity: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _UseTex: 1
+    - _UseTex: 0
     m_Colors:
     - _Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
   m_BuildTextureStacks: []
