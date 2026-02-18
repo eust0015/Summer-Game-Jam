@@ -160,15 +160,26 @@ public class PlayerInteractController : MonoBehaviour
 		}
 	}
 
+	void PauseGame()
+	{
+		if (PauseMenu.Instance != null)
+		{
+			PauseMenu.Instance.Pause();
+		}
+	}
+
 	private void OnEnable()
 	{
 		playerInput.actions["Interact"].started += ctx => OnInteractInput(ctx);
 		playerInput.actions["Interact"].canceled += ctx => OnInteractInput(ctx);
+
+		playerInput.actions["Pause"].started += ctx => PauseGame();
 	}
 
 	private void OnDisable()
 	{
 		playerInput.actions["Interact"].started -= ctx => OnInteractInput(ctx);
 		playerInput.actions["Interact"].canceled -= ctx => OnInteractInput(ctx);
+		playerInput.actions["Pause"].started -= ctx => PauseGame();
 	}
 }

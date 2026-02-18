@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] float decay = 0.5f;
 
 	Vector2 movementInput { get; set; } = Vector2.zero;
+	bool isControlEnabled = true;
 
 	private void Awake()
 	{
@@ -32,21 +33,16 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
 	}
 
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void EnableControl(bool state)
+	{
+		isControlEnabled = state;
+		CameraController.Instance.ToggleCameraMovement(state);
+	}
 
 	private void FixedUpdate()
 	{
-		ApplyForces();
+		if (isControlEnabled)
+			ApplyForces();
 	}
 
 	void ApplyForces()
