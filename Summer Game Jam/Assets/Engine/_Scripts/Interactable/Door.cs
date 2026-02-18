@@ -40,6 +40,23 @@ public class Door : MonoBehaviour, IInteractable, IInteractDuration
 		Use();
 	}
 
+	public void Unlock(bool andOpen = false)
+	{
+		isLocked = false;
+		Debug.Log($"{this.name} unlocked");
+
+		if (andOpen)
+		{
+			Open();
+		}
+	}
+
+	public void Lock()
+	{
+		isLocked = true;
+		Debug.Log($"{this.name} locked");
+	}
+
 	public void Use()
 	{
 		if (!isOpen)
@@ -50,6 +67,12 @@ public class Door : MonoBehaviour, IInteractable, IInteractDuration
 
 	void Open()
 	{
+		if (isLocked)
+		{
+			Debug.Log($"{this.name} is locked. Cannot open.");
+			return;
+		}
+
 		animator.SetTrigger("Open");
 		isOpen = true;
 	}

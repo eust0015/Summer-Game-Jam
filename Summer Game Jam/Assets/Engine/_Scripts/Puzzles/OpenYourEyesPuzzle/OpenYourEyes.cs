@@ -61,10 +61,6 @@ public class OpenYourEyes : Puzzle
         bottomEyeLid.anchoredPosition = bottomEyeLidOpenPosition;
         onPuzzleCompleted?.Invoke();
         enabled = false;
-        topEyeLid.gameObject.SetActive(false);
-        bottomEyeLid.gameObject.SetActive(false);
-        innerMonologue.SetActive(false);
-        inputPrompt.SetActive(false);
-        SolvePuzzle();
-    }
+        GameManager.Instance.EnableControl(true);
+	}
 }
