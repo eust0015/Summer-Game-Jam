@@ -1,12 +1,23 @@
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plunger : MonoBehaviour, IInteractable
+public class ToiletShark : MonoBehaviour, IInteractable
 {
 	public float InteractionTime { get; set; } = 0f;
 	Animator anim;
+
+	[SerializeField] private GameObject explosion;
+
+
+
+	private bool ready = false, hasBeenUsed = false;
+
+	public void setReady(bool value)
+	{
+		ready = value;
+		Debug.Log("Shark is now ready: " + ready);
+	}
 
 	public Vector3 GetTargetPoint()
 	{
@@ -20,21 +31,32 @@ public class Plunger : MonoBehaviour, IInteractable
 	public void OnFocus()
 	{
 		anim?.SetBool("isFocused", true);
-		Debug.Log("Plunger focused");
+		Debug.Log("Shark focused");
 	}
 
 	public void OnUnfocus()
 	{
 		anim?.SetBool("isFocused", false);
-		Debug.Log("Plunger Unfocused");
-		// Code to execute when the door loses focus
+		Debug.Log("Shark Unfocused");
+
 	}
 
 	public void OnInteract(GameObject obj)
 	{
-		Debug.Log("Interacted with item");
+		if (ready && !hasBeenUsed)
+		{
+			Debug.Log("Interacted with shark");
+			Destroy(this.gameObject);			
+			if (explosion != null)
+			{
+				Instantiate(explosion, transform.position, Quaternion.identity);
+			}
+			hasBeenUsed = true;
+
+		}
+
 		// Use();
-        Destroy(this.gameObject);
+        
 	}
 
 	public void Drop()
@@ -52,4 +74,5 @@ public class Plunger : MonoBehaviour, IInteractable
 	{
 
 	}
+
 }
