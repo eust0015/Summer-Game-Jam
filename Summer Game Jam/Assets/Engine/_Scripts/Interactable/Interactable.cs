@@ -53,6 +53,7 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	{
 		currentState = FocusState.FOCUSED;
 		Crosshair.Instance.SetDetect(true);
+		InteractUI.Instance.SetInteractable(this);
 		onFocused?.Invoke();
 	}
 
@@ -60,6 +61,7 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	{
 		currentState = FocusState.UNFOCUSED;
 		Crosshair.Instance.SetDetect(false);
+		InteractUI.Instance.ResetInteractable();
 		onUnfocused?.Invoke();
 	}
 
@@ -76,10 +78,24 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 	}
 	
 
-	public Vector3 GetTargetPoint() => transform.position;
+	public Vector3 GetTargetPoint() 
+	{
+		return (targetPointOverride != null) ? targetPointOverride.transform.position : transform.position;
+	}
 
 	private void OnDrawGizmosSelected()
 	{
+		if (targetPointOverride != null)
+		{
+			Gizmos.color = Color.green;
+			Gizmos.DrawSphere(targetPointOverride.position, 0.1f);
+			Gizmos.DrawLine(transform.position, targetPointOverride.position);
+		}
+		else
+		{
+			Gizmos.color = Color.red;
+			Gizmos.DrawSphere(transform.position, 0.1f);
+		}
 #if UNITY_EDITOR
 		Handles.Label(transform.position + Vector3.up * 0.1f, $"Interactable: {itemID} State: {currentState}");
 #endif

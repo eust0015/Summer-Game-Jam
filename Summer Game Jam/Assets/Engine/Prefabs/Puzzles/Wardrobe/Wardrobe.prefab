@@ -654,6 +654,9 @@ MonoBehaviour:
   puzzleName: Unnamed Puzzle
   isPuzzleSolved: 0
   requiredIndex: 0
+  PuzzleSolvedAction:
+    m_PersistentCalls:
+      m_Calls: []
   NextPuzzle: {fileID: 0}
   isActive: 0
   items:
@@ -794,6 +797,10 @@ PrefabInstance:
       propertyPath: parentPuzzle
       value: 
       objectReference: {fileID: 5482771489904138288}
+    - target: {fileID: 3265236110500262057, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: itemID
+      value: Shirt
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -875,6 +882,10 @@ PrefabInstance:
       propertyPath: parentPuzzle
       value: 
       objectReference: {fileID: 5482771489904138288}
+    - target: {fileID: 3265236110500262057, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: itemID
+      value: Dirty Shirt
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -956,6 +967,10 @@ PrefabInstance:
       propertyPath: parentPuzzle
       value: 
       objectReference: {fileID: 5482771489904138288}
+    - target: {fileID: 3265236110500262057, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: itemID
+      value: Jacket
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -1037,6 +1052,10 @@ PrefabInstance:
       propertyPath: parentPuzzle
       value: 
       objectReference: {fileID: 5482771489904138288}
+    - target: {fileID: 3265236110500262057, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: itemID
+      value: Sweater
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -1106,9 +1125,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3812456204184903033}
     m_Modifications:
+    - target: {fileID: 2212386861151488013, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.125
+      objectReference: {fileID: 0}
     - target: {fileID: 2365589138067363053, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
       propertyPath: m_Name
       value: SlidingDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109650676711483664, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
+      propertyPath: itemID
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 5188539709364768737, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
       propertyPath: m_LocalScale.y
@@ -1208,6 +1235,10 @@ PrefabInstance:
       propertyPath: parentPuzzle
       value: 
       objectReference: {fileID: 5482771489904138288}
+    - target: {fileID: 3265236110500262057, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
+      propertyPath: itemID
+      value: Formal Shirt
+      objectReference: {fileID: 0}
     - target: {fileID: 4065062827468701999, guid: 07eb4fa945fd3834b90eed940d3c6212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -1277,9 +1308,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3812456204184903033}
     m_Modifications:
+    - target: {fileID: 2212386861151488013, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.125
+      objectReference: {fileID: 0}
     - target: {fileID: 2365589138067363053, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
       propertyPath: m_Name
       value: SlidingDoor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109650676711483664, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
+      propertyPath: itemID
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 5188539709364768737, guid: 7001837212bbfb548b896ff77ed6c755, type: 3}
       propertyPath: m_LocalScale.y
