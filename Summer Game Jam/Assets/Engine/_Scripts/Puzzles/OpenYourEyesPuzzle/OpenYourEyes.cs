@@ -6,46 +6,59 @@ public class OpenYourEyes : Puzzle
     [SerializeField] private RectTransform topEyeLid;
     [SerializeField] private RectTransform bottomEyeLid;
     [SerializeField] private GameObject innerMonologue;
+    [SerializeField] private GameObject inputPrompt;
     [SerializeField] private UnityEvent onPuzzleCompleted;
-    private const float speedInPixelsPerSecond = 1f;
-    private static readonly Vector2 topEyeLidClosedPosition = new(0, 270f);
-    private static readonly Vector2 topEyeLidOpenPosition = new(0, 500f);
+    [SerializeField] private float durationInSeconds = 3f;
+    [SerializeField] private AnimationCurve ease;
+    private static readonly Vector2 topEyeLidClosedPosition = new(0,  270f);
+    private static readonly Vector2 topEyeLidOpenPosition = new(0,  500f);
     private static readonly Vector2 bottomEyeLidClosedPosition = new(0, -270f);
     private static readonly Vector2 bottomEyeLidOpenPosition = new(0, -500f);
 
+    private float progress; // 0 to 1
+    private bool completed;
+
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        bool inputIsDown = Input.GetKey(KeyCode.F) || Input.GetMouseButton(0);
+        float targetProgress = inputIsDown ? 1f : 0f;
+
+        float step = (durationInSeconds > 0f) ? Time.deltaTime / durationInSeconds : 1f;
+        if (targetProgress > progress)
         {
-            OpenEyes();
+            progress = Mathf.Min(1f, progress + step);
         }
-        else
+        else if (targetProgress < progress)
+            progress = Mathf.Max(0f, progress - step);
+
+        float time = ease.Evaluate(progress);
+
+        topEyeLid.anchoredPosition = Vector2.Lerp(topEyeLidClosedPosition, topEyeLidOpenPosition, time);
+        bottomEyeLid.anchoredPosition = Vector2.Lerp(bottomEyeLidClosedPosition, bottomEyeLidOpenPosition, time);
+
+        if (!completed && progress >= 1f)
         {
-            CloseEyes();
+            CompleteNow();
         }
     }
 
-    private void OpenEyes()
+    public override void ActivatePuzzle()
     {
-        topEyeLid.anchoredPosition = Vector2.Lerp(topEyeLid.anchoredPosition, topEyeLidOpenPosition, Time.deltaTime * speedInPixelsPerSecond);
-        bottomEyeLid.anchoredPosition = Vector2.Lerp(bottomEyeLid.anchoredPosition, bottomEyeLidOpenPosition, Time.deltaTime * speedInPixelsPerSecond);
-        innerMonologue.SetActive(false);
-
-        if (Vector2.Distance(topEyeLid.anchoredPosition, topEyeLidOpenPosition) < 0.1f)
-        {
-            PuzzleCompleted();
-        }
-    }
-
-    private void CloseEyes()
-    {
-        topEyeLid.anchoredPosition = Vector2.Lerp(topEyeLid.anchoredPosition, topEyeLidClosedPosition, Time.deltaTime * speedInPixelsPerSecond);
-        bottomEyeLid.anchoredPosition = Vector2.Lerp(bottomEyeLid.anchoredPosition, bottomEyeLidClosedPosition, Time.deltaTime * speedInPixelsPerSecond);
+        base.ActivatePuzzle();
+        completed = false;
+        progress = 0f;
+        topEyeLid.anchoredPosition = topEyeLidClosedPosition;
+        bottomEyeLid.anchoredPosition = bottomEyeLidClosedPosition;
         innerMonologue.SetActive(true);
+        inputPrompt.SetActive(true);
+        enabled = true;
     }
 
-    private void PuzzleCompleted()
+    private void CompleteNow()
     {
+        completed = true;
+        topEyeLid.anchoredPosition = topEyeLidOpenPosition;
+        bottomEyeLid.anchoredPosition = bottomEyeLidOpenPosition;
         onPuzzleCompleted?.Invoke();
         enabled = false;
         GameManager.Instance.EnableControl(true);

@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class FadeOutEyes : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private float fadeDurationInSeconds = 1f;
+    [SerializeField] private float fadeDurationInSeconds = 2f;
     [SerializeField] private UnityEvent onFadeOutComplete;
 
     private void Update()
