@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775484540801285872}
+  - component: {fileID: 7956624358695761636}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -112,6 +113,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &7956624358695761636
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871719488776954805}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2321130270127897504
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Crosshair
   crosshairFillImage: {fileID: 976076034128129906}
   crosshairDetectImage: {fileID: 3416857487751048048}
+  crosshairCanvasGroup: {fileID: 7956624358695761636}
   detectColour: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
   defaultColour: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
 --- !u!1 &7776769608029337852
