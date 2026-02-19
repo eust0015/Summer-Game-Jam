@@ -245,12 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -286,6 +286,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+      propertyPath: onFadeOutCompleteBool.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
       propertyPath: onFadeOutComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -300,6 +304,14 @@ PrefabInstance:
     - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
       propertyPath: onFadeOutComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+      propertyPath: onFadeOutCompleteBool.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4347788321910575766}
+    - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+      propertyPath: onFadeOutCompleteBool.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3690798427293265559, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
       propertyPath: onFadeOutComplete.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -446,6 +458,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2603227749956701407}
     - target: {fileID: 5840809180539464713, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 6329523605654473260}
+    - target: {fileID: 5840809180539464713, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+      propertyPath: nextPuzzle
+      value: 
+      objectReference: {fileID: 7058595344782709308}
+    - target: {fileID: 5840809180539464713, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
       propertyPath: onPuzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 7058595344782709308}
@@ -494,6 +514,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+--- !u!1 &4347788321910575766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4478518836191235067, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
+  m_PrefabInstance: {fileID: 175806782315256173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4605052076652312982 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4438571354379804923, guid: c376ac977e5a0aa46a8a083d57fde3f8, type: 3}
@@ -539,14 +564,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1228956192139627038}
-    - target: {fileID: 5350325092194514893, guid: c646e1f5a52886e499392c821e7a7a0f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 5350325092194514893, guid: c646e1f5a52886e499392c821e7a7a0f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 512
-      objectReference: {fileID: 0}
     - target: {fileID: 5754938757249500792, guid: c646e1f5a52886e499392c821e7a7a0f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

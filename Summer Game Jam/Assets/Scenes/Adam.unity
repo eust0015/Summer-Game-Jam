@@ -3690,6 +3690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3551315678082627578, guid: f383acd3b65042843a0cd0a0d9bf8c8d, type: 3}
+      propertyPath: onFadeOutComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4084065856314057708, guid: f383acd3b65042843a0cd0a0d9bf8c8d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

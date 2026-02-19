@@ -10,6 +10,7 @@ public class OpenYourEyes : Puzzle
     [SerializeField] private UnityEvent onPuzzleCompleted;
     [SerializeField] private float durationInSeconds = 3f;
     [SerializeField] private AnimationCurve ease;
+    [SerializeField] private GameObject mainCamera;
     private static readonly Vector2 topEyeLidClosedPosition = new(0,  270f);
     private static readonly Vector2 topEyeLidOpenPosition = new(0,  500f);
     private static readonly Vector2 bottomEyeLidClosedPosition = new(0, -270f);
@@ -50,8 +51,11 @@ public class OpenYourEyes : Puzzle
         progress = 0f;
         topEyeLid.anchoredPosition = topEyeLidClosedPosition;
         bottomEyeLid.anchoredPosition = bottomEyeLidClosedPosition;
+        topEyeLid.gameObject.SetActive(true);
+        bottomEyeLid.gameObject.SetActive(true);
         innerMonologue.SetActive(true);
         inputPrompt.SetActive(true);
+        mainCamera.SetActive(true);
         enabled = true;
 
 		CameraController.Instance.ToggleCamera(false);
@@ -64,6 +68,8 @@ public class OpenYourEyes : Puzzle
         completed = true;
         topEyeLid.anchoredPosition = topEyeLidOpenPosition;
         bottomEyeLid.anchoredPosition = bottomEyeLidOpenPosition;
+        topEyeLid.gameObject.SetActive(false);
+        bottomEyeLid.gameObject.SetActive(false);
         onPuzzleCompleted?.Invoke();
 		CameraController.Instance.ToggleMouse(false);
 		enabled = false;
