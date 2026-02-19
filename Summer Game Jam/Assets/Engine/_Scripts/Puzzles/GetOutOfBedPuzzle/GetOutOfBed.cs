@@ -12,13 +12,18 @@ public class GetOutOfBed : Puzzle
     {
         target1.ActivateTarget();
         innerMonologue.SetActive(true);
-        base.ActivatePuzzle();
+		CameraController.Instance?.ToggleMouse(false);
+		base.ActivatePuzzle();
     }
 
     public void PuzzleCompleted()
     {
         innerMonologue.SetActive(false);
         onPuzzleCompleted?.Invoke();
-        SolvePuzzle();
+        GameManager.Instance?.EnableControl(true);
+		CameraController.Instance?.ToggleCamera(true);
+		CameraController.Instance?.ToggleMouse(true);
+		PlayerTargetSystem.Instance?.SetEnabled(true);
+		SolvePuzzle();
     }
 }

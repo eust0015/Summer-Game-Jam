@@ -45,7 +45,7 @@ public class OpenYourEyes : Puzzle
 
     public override void ActivatePuzzle()
     {
-        base.ActivatePuzzle();
+        Debug.Log("Open eyes puzzle activated");
         completed = false;
         progress = 0f;
         topEyeLid.anchoredPosition = topEyeLidClosedPosition;
@@ -53,7 +53,10 @@ public class OpenYourEyes : Puzzle
         innerMonologue.SetActive(true);
         inputPrompt.SetActive(true);
         enabled = true;
-    }
+		CameraController.Instance.ToggleCamera(false);
+        PlayerTargetSystem.Instance.SetEnabled(false);
+		base.ActivatePuzzle();
+	}
 
     private void CompleteNow()
     {
@@ -62,6 +65,6 @@ public class OpenYourEyes : Puzzle
         bottomEyeLid.anchoredPosition = bottomEyeLidOpenPosition;
         onPuzzleCompleted?.Invoke();
         enabled = false;
-        GameManager.Instance.EnableControl(true);
+        //GameManager.Instance.EnableControl(true);
 	}
 }
