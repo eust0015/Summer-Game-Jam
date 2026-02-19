@@ -64,6 +64,7 @@ public class Microwave : MonoBehaviour
     public void Explode()
     {
         Debug.Log("Microwave Exploded");
+        PlayerController.Instance.PlayerDeath();
         ToggleDoor();
     }
 
