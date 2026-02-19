@@ -7,7 +7,6 @@ public class Microwave : MonoBehaviour
     public AudioClip normalRunningAudio;
     public AudioClip badRunningAudio;
     public AudioClip explodeAudio;
-    public AudioClip beepingAudio;
     private int remainingTries;
     private FeedTheBaby puzzleMaster;
     private Animator animator;
@@ -25,7 +24,7 @@ public class Microwave : MonoBehaviour
 
     public void StartMicrowave()
     {
-        if (puzzleMaster.GetHeldFood() != null) 
+        if (puzzleMaster.foodHeld) 
         {
             if (puzzleMaster.GetHeldFood() == puzzleMaster.correctUncookedFoodID)
             {
@@ -51,8 +50,6 @@ public class Microwave : MonoBehaviour
     public void EndMicrowaveNormal()
     {
         Debug.Log("Microwave Done");
-        audioSource.Stop();
-        audioSource.PlayOneShot(beepingAudio);
         ToggleDoor();
     }
 
@@ -61,8 +58,6 @@ public class Microwave : MonoBehaviour
         Debug.Log("Microwave Done");
         internalInteractionPoint.SetActive(true);
         bowl.SetActive(false);
-        audioSource.Stop();
-        audioSource.PlayOneShot(beepingAudio);
         ToggleDoor();
     }
 

@@ -58,6 +58,7 @@ MonoBehaviour:
   foods: []
   microwave: {fileID: 1540217835781866343}
   babyScreams: {fileID: 3595146050662587678}
+  foodHeld: 0
 --- !u!1001 &4041882187427665614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,6 +205,10 @@ PrefabInstance:
     - target: {fileID: 3345342332775935910, guid: ad67fc9c1a71e8a419ce4bc14d0d89ed, type: 3}
       propertyPath: m_Name
       value: Baby
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349430879754513066, guid: ad67fc9c1a71e8a419ce4bc14d0d89ed, type: 3}
+      propertyPath: Loop
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6506349964520619620, guid: ad67fc9c1a71e8a419ce4bc14d0d89ed, type: 3}
       propertyPath: m_LocalPosition.x

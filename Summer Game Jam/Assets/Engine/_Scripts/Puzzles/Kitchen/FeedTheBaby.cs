@@ -11,7 +11,7 @@ public class FeedTheBaby : Puzzle
     public Microwave microwave;
     public AudioSource babyScreams;
 
-    private bool foodHeld;
+    public bool foodHeld;
     private string heldFoodID;
 
     public override void ActivatePuzzle()
