@@ -97,3 +97,5 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+Summer Game Jam/Assets/Scenes/Production/Level.unity
+Summer Game Jam/Assets/Resources/Models/Shirt.fbx.meta
