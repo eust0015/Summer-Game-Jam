@@ -11,8 +11,8 @@ public class GetOutOfBed : Puzzle
     public override void ActivatePuzzle()
     {
         target1.ActivateTarget();
-        innerMonologue.SetActive(true);
-		CameraController.Instance?.ToggleMouse(false);
+		CameraController.Instance.ToggleMouse(false);
+		innerMonologue.SetActive(true);
 		base.ActivatePuzzle();
     }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +16,28 @@ public class Puzzle : MonoBehaviour
 
 	public Puzzle NextPuzzle;
     public bool isActive = false;
+
+    [SerializeField] GameObject nextPuzzle;
+
+    IEnumerator NextPuzzleRoutine()
+    {
+        yield return new WaitForSeconds(2f);
+
+		if (NextPuzzle != null)
+		{
+			Debug.Log($"Activating next puzzle: {NextPuzzle.puzzleName}");
+			NextPuzzle.ActivatePuzzle();
+		}
+		else
+		{
+			Debug.Log("No next puzzle to activate.");
+		}
+
+		if (nextPuzzle != null)
+		{
+			nextPuzzle.SetActive(true);
+		}
+	}
 
     public virtual void ActivatePuzzle()
     {
@@ -40,23 +63,16 @@ public class Puzzle : MonoBehaviour
 		}
     }
 
-	public void SolvePuzzle()
+    public void SolvePuzzle()
     {
         Debug.Log("Puzzle Solved");
-		isPuzzleSolved = true;
+        isPuzzleSolved = true;
         OnPuzzleSolved?.Invoke(this);
         PuzzleSolvedAction?.Invoke();
 
-		if (NextPuzzle != null)
-        {
-            Debug.Log($"Activating next puzzle: {NextPuzzle.puzzleName}");
-            NextPuzzle.ActivatePuzzle();
-		}
-        else
-        {
-            Debug.Log("No next puzzle to activate.");
-		}
-	}
+        if (this.enabled)
+            StartCoroutine(NextPuzzleRoutine());
+    }
 
 	private void OnDrawGizmos()
 	{

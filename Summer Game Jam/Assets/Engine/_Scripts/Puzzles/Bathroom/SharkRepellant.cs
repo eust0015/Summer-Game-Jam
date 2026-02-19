@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SharkRepellant : MonoBehaviour, IInteractable
+public class SharkRepellant : Item, IInteractable
 {
-	public float InteractionTime { get; set; } = 0f;
+	new public float InteractionTime { get; set; } = 0f;
 	public ToiletShark shark;
 	Animator anim;
 	private bool ready = false, hasBeenUsed = false;
@@ -15,29 +15,30 @@ public class SharkRepellant : MonoBehaviour, IInteractable
 		Debug.Log("Shark Repellant is now ready: " + ready);
 	}
 
-	public Vector3 GetTargetPoint()
+	new public Vector3 GetTargetPoint()
 	{
 		return transform.position;
 	}
-	// public override void Use()
-    // {
-    //     Debug.Log("Used item");
-    // }
+	 public override void Use()
+    {
+         Debug.Log("Used item");
+    }
 
-	public void OnFocus()
+	new public void OnFocus()
 	{
 		anim?.SetBool("isFocused", true);
 		Debug.Log("Shark Repellant focused");
+		base.OnFocus();
 	}
 
-	public void OnUnfocus()
+	new public void OnUnfocus()
 	{
 		anim?.SetBool("isFocused", false);
 		Debug.Log("Shark Repellant Unfocused");
-		// Code to execute when the door loses focus
+		base.OnUnfocus();
 	}
 
-	public void OnInteract(GameObject obj)
+	new public void OnInteract(GameObject obj)
 	{
 		if (ready && !hasBeenUsed)
 		{

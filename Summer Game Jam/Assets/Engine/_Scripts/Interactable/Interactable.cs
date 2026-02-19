@@ -51,6 +51,7 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 
 	public void OnFocus()
 	{
+		Debug.Log("INT FOCUS: " + itemID);
 		currentState = FocusState.FOCUSED;
 		Crosshair.Instance.SetDetect(true);
 		InteractUI.Instance.SetInteractable(this);
@@ -59,6 +60,7 @@ public class Interactable : MonoBehaviour, IInteractable, IInteractDuration
 
 	public void OnUnfocus()
 	{
+		Debug.Log("INT UNFOCUS: " + itemID);
 		currentState = FocusState.UNFOCUSED;
 		Crosshair.Instance.SetDetect(false);
 		InteractUI.Instance.ResetInteractable();
