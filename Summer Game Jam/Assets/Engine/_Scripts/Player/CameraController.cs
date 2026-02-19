@@ -18,6 +18,10 @@ public class CameraController : MonoBehaviour
     [SerializeField] Vector2 pitchMinMax = new Vector2(-40.0f, 85.0f);
 	[SerializeField] Vector2 defaultPanTilt = new Vector2(0.0f, 0.0f);
 
+	public void ToggleCamera(bool state)
+	{
+		mainCamera.enabled = state;
+	}
 
 	private void Awake()
 	{
@@ -53,7 +57,7 @@ public class CameraController : MonoBehaviour
 		}
 	}
 
-	void ToggleMouse(bool toggle)
+	public void ToggleMouse(bool toggle)
 	{
 		if (toggle)
 		{

@@ -1,6 +1,7 @@
-using UnityEngine;
 using System;
 using UnityEditor;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class Puzzle : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class Puzzle : MonoBehaviour
     [SerializeField] int requiredIndex = 0;
 
 	public event Action<Puzzle> OnPuzzleSolved;
+	public UnityEvent PuzzleSolvedAction;
 
-    public Puzzle NextPuzzle;
+	public Puzzle NextPuzzle;
     public bool isActive = false;
 
     public virtual void ActivatePuzzle()
@@ -43,8 +45,9 @@ public class Puzzle : MonoBehaviour
         Debug.Log("Puzzle Solved");
 		isPuzzleSolved = true;
         OnPuzzleSolved?.Invoke(this);
+        PuzzleSolvedAction?.Invoke();
 
-        if (NextPuzzle != null)
+		if (NextPuzzle != null)
         {
             Debug.Log($"Activating next puzzle: {NextPuzzle.puzzleName}");
             NextPuzzle.ActivatePuzzle();
