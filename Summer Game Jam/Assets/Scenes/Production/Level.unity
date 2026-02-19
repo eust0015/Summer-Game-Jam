@@ -8016,6 +8016,14 @@ PrefabInstance:
       propertyPath: TiltAxis.Value
       value: -55
       objectReference: {fileID: 0}
+    - target: {fileID: 2533280445279424415, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
+      propertyPath: m_Dithering
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533280445279424415, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6792526932439753104, guid: 6200beb7f7df0614ab596a871cdae6b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.65
