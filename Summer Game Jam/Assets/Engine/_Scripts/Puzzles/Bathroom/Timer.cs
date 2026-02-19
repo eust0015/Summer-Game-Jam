@@ -44,6 +44,12 @@ public class Timer : MonoBehaviour
     void TriggerPlayerDeath()
     {
         hasTriggeredDeath = true;
+        // Disable parent canvas if present
+        Canvas parentCanvas = GetComponentInParent<Canvas>();
+        if (parentCanvas != null)
+        {
+            parentCanvas.enabled = false;
+        }
         if (PlayerController.Instance != null)
         {
             PlayerController.Instance.PlayerDeath();

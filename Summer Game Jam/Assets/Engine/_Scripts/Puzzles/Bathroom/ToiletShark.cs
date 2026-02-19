@@ -8,6 +8,7 @@ public class ToiletShark : MonoBehaviour, IInteractable
 	Animator anim;
 
 	[SerializeField] private GameObject explosion;
+	[SerializeField] private GameObject playerSharkRepellant;
 
 
 
@@ -46,17 +47,55 @@ public class ToiletShark : MonoBehaviour, IInteractable
 		if (ready && !hasBeenUsed)
 		{
 			Debug.Log("Interacted with shark");
-			Destroy(this.gameObject);			
-			if (explosion != null)
-			{
-				Instantiate(explosion, transform.position, Quaternion.identity);
-			}
 			hasBeenUsed = true;
-
+			if (playerSharkRepellant != null)
+			{
+				StartCoroutine(ActivateRepellantAndExplode());
+			}
+			else
+			{
+				ExplodeAndDestroy();
+			}
 		}
+	}
 
-		// Use();
-        
+	private System.Collections.IEnumerator ActivateRepellantAndExplode()
+	{
+		playerSharkRepellant.SetActive(true);
+		yield return new WaitForSeconds(0.5f);
+		yield return StartCoroutine(ShrinkAndMoveDown());
+		ExplodeAndDestroy();
+	}
+
+	private System.Collections.IEnumerator ShrinkAndMoveDown()
+	{
+		float duration = 0.25f;
+		float elapsed = 0f;
+		Vector3 startScale = transform.localScale;
+		Vector3 endScale = startScale * 0.1f;
+		Vector3 startPos = transform.position;
+		Vector3 endPos = startPos + Vector3.down * 0.2f;
+		while (elapsed < duration)
+		{
+			float t = elapsed / duration;
+			transform.localScale = Vector3.Lerp(startScale, endScale, t);
+			transform.position = Vector3.Lerp(startPos, endPos, t);
+			elapsed += Time.deltaTime;
+			yield return null;
+		}
+		transform.localScale = endScale;
+		transform.position = endPos;
+	}
+
+	private void ExplodeAndDestroy()
+	{
+		if (explosion != null)
+		{
+			// Instantiate(explosion, transform.position, Quaternion.identity);
+		}
+		Destroy(this.gameObject);
+		if (playerSharkRepellant != null)
+			playerSharkRepellant.SetActive(false);
 	}
 
 	public void Drop()

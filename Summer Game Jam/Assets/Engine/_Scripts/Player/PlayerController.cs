@@ -48,12 +48,14 @@ public class PlayerController : MonoBehaviour
 			youDiedCanvas.enabled = true;
 		}
 
+		
+
 
 
 		if (cameraTransform != null)
 		{
 			cameraTransform.parent = null;
-			Rigidbody camRb = cameraTransform.GetComponent<Rigidbody>();
+			Rigidbody camRb = GetComponent<Rigidbody>();
 			if (camRb == null)
 			{
 				camRb = cameraTransform.gameObject.AddComponent<Rigidbody>();
@@ -62,11 +64,15 @@ public class PlayerController : MonoBehaviour
 			camRb.isKinematic = false;
 			camRb.useGravity = true;
 			camRb.AddForce(Vector3.down * 10f, ForceMode.Impulse);
-
-			Debug.Log("Applied force to camera for death effect.");
+			camRb.AddForce(Vector3.left * 10f, ForceMode.Impulse);
+			camRb.AddTorque(new Vector3(Random.Range(-200, 200), Random.Range(-200, 200), Random.Range(-200, 200)), ForceMode.Impulse);
+			// Debug.DrawLine(this.transform.position, , Color.red, 2f);
+			Debug.Log("Applied force and torque to camera for death effect.");
 		}
 
 		Debug.Log("Player has died.");
+		GetComponent<Rigidbody>().freezeRotation = false;
+		GetComponent<PlayerController>().enabled = false;
 
 	}
 
