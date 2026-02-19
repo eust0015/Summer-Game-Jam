@@ -63,15 +63,32 @@ public class Puzzle : MonoBehaviour
 		}
     }
 
-    public void SolvePuzzle()
+    public void SolvePuzzle(bool skiproutine = false)
     {
         Debug.Log("Puzzle Solved");
         isPuzzleSolved = true;
         OnPuzzleSolved?.Invoke(this);
         PuzzleSolvedAction?.Invoke();
 
-        if (this.enabled)
+        if (!skiproutine)
             StartCoroutine(NextPuzzleRoutine());
+        else
+        {
+			if (NextPuzzle != null)
+			{
+				Debug.Log($"Activating next puzzle: {NextPuzzle.puzzleName}");
+				NextPuzzle.ActivatePuzzle();
+			}
+			else
+			{
+				Debug.Log("No next puzzle to activate.");
+			}
+
+			if (nextPuzzle != null)
+			{
+				nextPuzzle.SetActive(true);
+			}
+		}
     }
 
 	private void OnDrawGizmos()

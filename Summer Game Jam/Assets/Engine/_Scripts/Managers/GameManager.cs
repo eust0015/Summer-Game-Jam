@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
     {
-        PlayerController.Instance.EnableControl(true);
-        Crosshair.Instance.SetVisible(true);
-        PlayerTargetSystem.Instance.SetEnabled(true);
+        PlayerController.Instance.EnableControl(false);
+        Crosshair.Instance.SetVisible(false);
+        PlayerTargetSystem.Instance.SetEnabled(false);
 	}
 
     // Update is called once per frame

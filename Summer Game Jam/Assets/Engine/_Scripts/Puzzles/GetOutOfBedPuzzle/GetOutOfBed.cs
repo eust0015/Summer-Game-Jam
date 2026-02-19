@@ -24,6 +24,6 @@ public class GetOutOfBed : Puzzle
 		CameraController.Instance?.ToggleCamera(true);
 		CameraController.Instance?.ToggleMouse(true);
 		PlayerTargetSystem.Instance?.SetEnabled(true);
-		SolvePuzzle();
+		SolvePuzzle(true);
     }
 }
