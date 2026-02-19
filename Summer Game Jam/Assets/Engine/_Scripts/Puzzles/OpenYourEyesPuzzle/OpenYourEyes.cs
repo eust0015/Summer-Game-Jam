@@ -20,7 +20,7 @@ public class OpenYourEyes : Puzzle
 
     private void Update()
     {
-        bool inputIsDown = Input.GetKey(KeyCode.F) || Input.GetMouseButton(0);
+        bool inputIsDown = Input.GetKey(KeyCode.E) || Input.GetMouseButton(0);
         float targetProgress = inputIsDown ? 1f : 0f;
 
         float step = (durationInSeconds > 0f) ? Time.deltaTime / durationInSeconds : 1f;
