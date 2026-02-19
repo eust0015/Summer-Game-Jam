@@ -74,12 +74,12 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EmissionMod: 0
-    - _MetallicMod: 0
+    - _MetallicMod: 1
     - _NormalMod: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0
+    - _Smoothness: 1
     - _SpecularMod: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1

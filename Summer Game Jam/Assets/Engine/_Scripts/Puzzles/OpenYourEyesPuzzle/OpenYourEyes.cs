@@ -24,6 +24,7 @@ public class OpenYourEyes : Puzzle
         float targetProgress = inputIsDown ? 1f : 0f;
 
         float step = (durationInSeconds > 0f) ? Time.deltaTime / durationInSeconds : 1f;
+
         if (targetProgress > progress)
         {
             progress = Mathf.Min(1f, progress + step);
