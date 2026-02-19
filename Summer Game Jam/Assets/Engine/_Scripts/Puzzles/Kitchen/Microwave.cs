@@ -33,12 +33,12 @@ public class Microwave : MonoBehaviour
             }
             else if (remainingTries <= 0)
             {
-                Debug.Log("Microwave Running Bad");
+                Debug.Log("Microwave Exploding");
                 animator.SetTrigger("Explode");
             }
             else
             {
-                Debug.Log("Microwave Exploding");
+                Debug.Log("Microwave Running bad");
                 animator.SetTrigger("RunBad");
                 remainingTries--;
             }
@@ -64,7 +64,6 @@ public class Microwave : MonoBehaviour
     public void Explode()
     {
         Debug.Log("Microwave Exploded");
-        audioSource.PlayOneShot(explodeAudio);
         ToggleDoor();
     }
 
@@ -89,7 +88,7 @@ public class Microwave : MonoBehaviour
     {
         bowl.SetActive(true);
         internalInteractionPoint.SetActive(false);
-        audioSource.PlayOneShot(badRunningAudio);
+        audioSource.PlayOneShot(explodeAudio);
         ToggleDoor();
     }
 

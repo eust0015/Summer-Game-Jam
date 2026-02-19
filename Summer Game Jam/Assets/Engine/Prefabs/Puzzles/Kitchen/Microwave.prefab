@@ -327,8 +327,8 @@ Transform:
   - {fileID: 5132964090039054602}
   - {fileID: 3561889691148424237}
   - {fileID: 3010765159326583165}
-  - {fileID: 7006966712419028018}
   - {fileID: 8363711805058226390}
+  - {fileID: 3769476786986621880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4927017515034571628
@@ -348,7 +348,6 @@ MonoBehaviour:
   normalRunningAudio: {fileID: 8300000, guid: 52d23afc31faf0547b4c8c042c281957, type: 3}
   badRunningAudio: {fileID: 8300000, guid: f4755395fabf2b54cacd9eefaf8a38eb, type: 3}
   explodeAudio: {fileID: 8300000, guid: 07636f72d8739644296c6c818c529ac2, type: 3}
-  beepingAudio: {fileID: 0}
 --- !u!95 &9036226068163154072
 Animator:
   serializedVersion: 7
@@ -734,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
   foodID: cookedfood
---- !u!1001 &6649297495202909425
+--- !u!1001 &663556249243409275
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -748,15 +747,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4430050881115766979, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.037
+      value: -0.614
       objectReference: {fileID: 0}
     - target: {fileID: 4430050881115766979, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.021
+      value: -0.016
       objectReference: {fileID: 0}
     - target: {fileID: 4430050881115766979, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.041
+      value: 0.494
       objectReference: {fileID: 0}
     - target: {fileID: 4430050881115766979, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -786,21 +785,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4813953230872478127, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.023
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813953230872478127, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.412
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
---- !u!4 &7006966712419028018 stripped
+--- !u!4 &3769476786986621880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4430050881115766979, guid: c5854cf82f5ca37448d8ec20718406bf, type: 3}
-  m_PrefabInstance: {fileID: 6649297495202909425}
+  m_PrefabInstance: {fileID: 663556249243409275}
   m_PrefabAsset: {fileID: 0}
