@@ -11,7 +11,10 @@ public class Food : Item, IInteractable
     public void Pickup()
     {
         Debug.Log($"Picked Up {foodID}");
-        puzzleMaster.PickupFood(foodID);
+        if (puzzleMaster.PickupFood(foodID))
+        {
+            this.gameObject.SetActive(false);
+        }
     }
     public override void Use() {  }
 }

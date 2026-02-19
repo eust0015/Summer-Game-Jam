@@ -7,7 +7,6 @@ public class FeedTheBaby : Puzzle
     public string correctCookedFoodID;
     public int numberOfTries;
 
-    public List<Interactable> foods;
     public Microwave microwave;
     public AudioSource babyScreams;
 
@@ -30,17 +29,18 @@ public class FeedTheBaby : Puzzle
         else return "none";
     }
 
-    public void PickupFood(string foodID)
+    public bool PickupFood(string foodID)
     {
         if (foodHeld)
         {
-            // say no somehow
-            return;
+            return false;
         }
 
         foodHeld = true;
 
         heldFoodID = foodID;
+
+        return true;
     }
 
     public void DropFood()
