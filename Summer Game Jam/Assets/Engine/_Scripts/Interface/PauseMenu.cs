@@ -22,8 +22,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuCanvasGroup.blocksRaycasts = state;
         isPaused = state;
 
-		Cursor.lockState = state ? CursorLockMode.None : CursorLockMode.Locked;
-		Cursor.visible = !state;
+        CameraController.Instance.ToggleMouse(true);
 	}
 
     public void Resume()

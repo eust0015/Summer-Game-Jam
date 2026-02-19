@@ -48,10 +48,6 @@ public class PlayerController : MonoBehaviour
 			youDiedCanvas.enabled = true;
 		}
 
-		
-
-
-
 		if (cameraTransform != null)
 		{
 			cameraTransform.parent = null;

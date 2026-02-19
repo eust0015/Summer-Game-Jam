@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerController.Instance.EnableControl(false);
         Crosshair.Instance.SetVisible(false);
+        PlayerTargetSystem.Instance.SetEnabled(false);
 	}
 
     // Update is called once per frame

@@ -21,8 +21,6 @@ public class GetOutOfBedTarget : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void Update()
     {
-        Debug.Log($"MouseOver: {mouseOver(Input.mousePosition)}");
-
         float progressTarget = mouseIsOver ? 1f : 0f;
 
         float step = (durationInSeconds > 0f) ? Time.deltaTime / durationInSeconds : 1f;
@@ -64,17 +62,9 @@ public class GetOutOfBedTarget : MonoBehaviour, IPointerEnterHandler, IPointerEx
         rectTransform.anchoredPosition = endPosition;
         rectTransform.localScale = endScale;
         mainCamera.localRotation = Quaternion.Euler(endRotationInDegrees);
-        onDestinationReached?.Invoke();
+		onDestinationReached?.Invoke();
         gameObject.SetActive(false);
     }
-
-    bool mouseOver(Vector2 mousePosition)
-    {
-        float radius = rectTransform.sizeDelta.x * rectTransform.localScale.x * 0.5f;
-        float mag = Vector2.Distance(mousePosition, rectTransform.anchoredPosition);
-
-        return mag <= radius;
-	}
 
 	public void OnPointerEnter(PointerEventData eventData) => mouseIsOver = true;
     public void OnPointerExit(PointerEventData eventData)  => mouseIsOver = false;

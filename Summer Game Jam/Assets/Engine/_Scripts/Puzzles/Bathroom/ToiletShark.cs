@@ -10,7 +10,7 @@ public class ToiletShark : MonoBehaviour, IInteractable
 	[SerializeField] private GameObject explosion;
 	[SerializeField] private GameObject playerSharkRepellant;
 
-
+	[SerializeField] Door doorToOpen;
 
 	private bool ready = false, hasBeenUsed = false;
 
@@ -93,6 +93,12 @@ public class ToiletShark : MonoBehaviour, IInteractable
 		{
 			// Instantiate(explosion, transform.position, Quaternion.identity);
 		}
+
+		if (doorToOpen != null)
+		{
+			doorToOpen.Unlock(true);
+		}
+
 		Destroy(this.gameObject);
 		if (playerSharkRepellant != null)
 			playerSharkRepellant.SetActive(false);
