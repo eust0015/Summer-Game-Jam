@@ -195,8 +195,8 @@ MonoBehaviour:
   endPosition: {x: 0, y: 800}
   startScale: {x: 1, y: 1, z: 1}
   endScale: {x: 0.25, y: 0.25, z: 0.25}
-  startRotationInDegrees: {x: 270, y: 180, z: 0}
-  endRotationInDegrees: {x: 360, y: 180, z: 0}
+  startRotationInDegrees: {x: 270, y: 0, z: 0}
+  endRotationInDegrees: {x: 360, y: 0, z: 0}
   onDestinationReached:
     m_PersistentCalls:
       m_Calls:
@@ -332,8 +332,8 @@ MonoBehaviour:
   endPosition: {x: -1720, y: 0}
   startScale: {x: 1, y: 1, z: 1}
   endScale: {x: 0.25, y: 0.25, z: 0.25}
-  startRotationInDegrees: {x: 0, y: 180, z: 0}
-  endRotationInDegrees: {x: 0, y: 90, z: 0}
+  startRotationInDegrees: {x: 0, y: 0, z: 0}
+  endRotationInDegrees: {x: 0, y: 270, z: 0}
   onDestinationReached:
     m_PersistentCalls:
       m_Calls:
@@ -403,6 +403,9 @@ MonoBehaviour:
   puzzleName: Get Out Of Bed Puzzle
   isPuzzleSolved: 0
   requiredIndex: 0
+  PuzzleSolvedAction:
+    m_PersistentCalls:
+      m_Calls: []
   NextPuzzle: {fileID: 0}
   isActive: 0
   target1: {fileID: 2585510536557670977}
@@ -518,10 +521,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6409628705819887731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 64}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5654587037354106238
 CanvasRenderer:
@@ -634,6 +637,8 @@ GameObject:
   - component: {fileID: 6409628705819887731}
   - component: {fileID: 8610418871896370743}
   - component: {fileID: 6241670651072679379}
+  - component: {fileID: 5335531966697873647}
+  - component: {fileID: 6770890395659335275}
   m_Layer: 5
   m_Name: InnerMonologueBackground
   m_TagString: Untagged
@@ -659,7 +664,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 475, y: 128}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8610418871896370743
 CanvasRenderer:
@@ -699,3 +704,43 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.16
+--- !u!114 &5335531966697873647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552720832406524418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
+--- !u!114 &6770890395659335275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552720832406524418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 48
+    m_Right: 48
+    m_Top: 32
+    m_Bottom: 32
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0

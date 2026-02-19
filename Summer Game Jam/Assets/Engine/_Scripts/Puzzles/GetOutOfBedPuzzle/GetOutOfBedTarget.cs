@@ -12,8 +12,8 @@ public class GetOutOfBedTarget : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] private Vector2 endPosition = new(0f, 980f);
     [SerializeField] private Vector3 startScale = Vector3.one;
     [SerializeField] private Vector3 endScale = new(0.25f, 0.25f, 0.25f);
-    [SerializeField] private Vector3 startRotationInDegrees = new(270f, 180f, 0f);
-    [SerializeField] private Vector3 endRotationInDegrees = new(360f, 180f, 0f);
+    [SerializeField] private Vector3 startRotationInDegrees = new(270f, 0f, 0f);
+    [SerializeField] private Vector3 endRotationInDegrees = new(360f, 0f, 0f);
     [SerializeField] private UnityEvent onDestinationReached;
     private bool mouseIsOver;
     private bool completed;
