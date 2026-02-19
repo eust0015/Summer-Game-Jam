@@ -15,6 +15,12 @@ public class PlayerTargetSystem : MonoBehaviour
 	private IInteractable currentTarget;
 
 	public IInteractable CurrentTarget => currentTarget;
+	public bool isEnabled = true;
+
+	public void SetEnabled(bool state)
+	{
+		isEnabled = state;
+	}
 
 	void FocusStart(IInteractable interactable)
 	{
@@ -113,7 +119,8 @@ public class PlayerTargetSystem : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		HandleRaycast();
+		if (isEnabled)
+			HandleRaycast();
 	}
 
 	void OnGUI()

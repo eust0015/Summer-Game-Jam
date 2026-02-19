@@ -21,6 +21,8 @@ public class GetOutOfBedTarget : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void Update()
     {
+        Debug.Log($"MouseOver: {mouseOver(Input.mousePosition)}");
+
         float progressTarget = mouseIsOver ? 1f : 0f;
 
         float step = (durationInSeconds > 0f) ? Time.deltaTime / durationInSeconds : 1f;
@@ -66,7 +68,15 @@ public class GetOutOfBedTarget : MonoBehaviour, IPointerEnterHandler, IPointerEx
         gameObject.SetActive(false);
     }
 
-    public void OnPointerEnter(PointerEventData eventData) => mouseIsOver = true;
+    bool mouseOver(Vector2 mousePosition)
+    {
+        float radius = rectTransform.sizeDelta.x * rectTransform.localScale.x * 0.5f;
+        float mag = Vector2.Distance(mousePosition, rectTransform.anchoredPosition);
+
+        return mag <= radius;
+	}
+
+	public void OnPointerEnter(PointerEventData eventData) => mouseIsOver = true;
     public void OnPointerExit(PointerEventData eventData)  => mouseIsOver = false;
 
     private static Vector3 LerpEulerAngles(Vector3 startRotation, Vector3 endRotation, float t)
