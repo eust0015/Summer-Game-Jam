@@ -39,6 +39,37 @@ public class PlayerController : MonoBehaviour
 		CameraController.Instance.ToggleCameraMovement(state);
 	}
 
+	public void PlayerDeath()
+	{
+		EnableControl(false);
+
+		if (youDiedCanvas != null)
+		{
+			youDiedCanvas.enabled = true;
+		}
+
+
+
+		if (cameraTransform != null)
+		{
+			cameraTransform.parent = null;
+			Rigidbody camRb = cameraTransform.GetComponent<Rigidbody>();
+			if (camRb == null)
+			{
+				camRb = cameraTransform.gameObject.AddComponent<Rigidbody>();
+			}
+			
+			camRb.isKinematic = false;
+			camRb.useGravity = true;
+			camRb.AddForce(Vector3.down * 10f, ForceMode.Impulse);
+
+			Debug.Log("Applied force to camera for death effect.");
+		}
+
+		Debug.Log("Player has died.");
+
+	}
+
 	private void FixedUpdate()
 	{
 		if (isControlEnabled)
@@ -86,4 +117,7 @@ public class PlayerController : MonoBehaviour
 		playerInput.actions["Move"].performed -= ctx => movementInput = ctx.ReadValue<Vector2>();
 		playerInput.actions["Move"].canceled -= ctx => movementInput = ctx.ReadValue<Vector2>();
 	}
+
+	[SerializeField] private Transform cameraTransform;
+	[SerializeField] private Canvas youDiedCanvas;
 }
